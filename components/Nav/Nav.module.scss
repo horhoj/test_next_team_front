@@ -1,0 +1,28 @@
+.wrap {
+
+
+  & > ul {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+
+    & > li {
+
+    }
+  }
+}
+
+.link {
+  text-decoration: none;
+  transition: transform 200ms;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: darkslateblue;
+}
+
+.active {
+  transform: scale(120%);
+}
+
