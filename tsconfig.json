@@ -38,6 +38,12 @@
       ],
       "@/styles/*": [
         "styles/*"
+      ],
+      "@/entityTypes/*": [
+        "entityTypes/*"
+      ],
+      "@/api/*": [
+        "api/*"
       ]
     }
   },

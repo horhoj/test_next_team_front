@@ -1,7 +1,19 @@
 import Head from 'next/head';
 import { PageViewMessageBoard } from '@/components/PageViewMessageBoard';
+import { api } from '@/api/index';
+import { MessageBoardItem } from '@/entityTypes/messageBoard';
 
-export default function Home() {
+export async function getServerSideProps() {
+  const messageFromServer = await api.messageBoard.getMessageList();
+
+  return { props: { messageFromServer } };
+}
+
+interface HomeProps {
+  messageFromServer: MessageBoardItem[];
+}
+
+export default function Home({ messageFromServer }: HomeProps) {
   return (
     <>
       <Head>
@@ -10,7 +22,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <PageViewMessageBoard />
+      <PageViewMessageBoard messageFromServer={messageFromServer} />
     </>
   );
 }

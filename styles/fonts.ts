@@ -6,6 +6,12 @@ export const fontRoboto400 = Roboto({
   weight: '400',
 });
 
+export const fontRoboto500 = Roboto({
+  subsets: ['cyrillic'],
+  display: 'auto',
+  weight: '500',
+});
+
 export const fontRoboto700 = Roboto({
   subsets: ['latin'],
   display: 'auto',
