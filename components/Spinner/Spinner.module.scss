@@ -1,0 +1,46 @@
+.Spinner {
+  z-index: 4000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  animation: progressBar .8s linear 0s infinite;
+  background: red linear-gradient(315deg, transparent, transparent 33%, rgba(0, 0, 0, .30) 33%, rgba(0, 0, 0, .30) 66%, transparent 66%, transparent) repeat-x scroll;
+  background-size: 8px 6px;
+  height: 6px;
+  margin-bottom: -5px;
+  width: 100%;
+}
+
+@keyframes progressBar {
+  0% {
+    background-position: 0 0
+  }
+  to {
+    background-position: 64px 0
+  }
+}
+
+.enter {
+  // margin-left: -300px;
+  opacity: 0;
+}
+
+.enterActive {
+  // margin-left: 0;
+  // transition: margin-left 300ms;
+  opacity: 1;
+  transition: opacity 100ms;
+}
+
+.exit {
+  // margin-left: 0;
+  opacity: 1;
+}
+
+.exitActive {
+  // margin-left: -300px;
+  // transition: margin-left 300ms;
+  opacity: 0;
+  transition: opacity 100ms;
+
+}

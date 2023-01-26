@@ -2,15 +2,21 @@ import Head from 'next/head';
 import { PageViewMessageBoard } from '@/components/PageViewMessageBoard';
 import { api } from '@/api/index';
 import { MessageBoardItem } from '@/entityTypes/messageBoard';
+import { ErrorView } from '@/components/ErrorView';
 
 export async function getServerSideProps() {
-  const messageFromServer = await api.messageBoard.getMessageList();
+  let messageFromServer = null;
+  try {
+    messageFromServer = await api.messageBoard.fetchMessageList();
+  } catch (e) {
+    messageFromServer = null;
+  }
 
   return { props: { messageFromServer } };
 }
 
 interface HomeProps {
-  messageFromServer: MessageBoardItem[];
+  messageFromServer: MessageBoardItem[] | null;
 }
 
 export default function Home({ messageFromServer }: HomeProps) {
@@ -22,7 +28,18 @@ export default function Home({ messageFromServer }: HomeProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <PageViewMessageBoard messageFromServer={messageFromServer} />
+      {messageFromServer && (
+        <PageViewMessageBoard messageFromServer={messageFromServer} />
+      )}
+
+      {messageFromServer === null && (
+        <ErrorView
+          error={{
+            message:
+              'ошибка обращения к АПИ для получения предварительных данных',
+          }}
+        />
+      )}
     </>
   );
 }

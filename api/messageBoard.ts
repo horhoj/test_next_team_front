@@ -1,11 +1,20 @@
 import { axiosInstance } from '@/api/transport';
 import { MessageBoardItem } from '@/entityTypes/messageBoard';
 
-export const getMessageList = async () => {
+export const fetchMessageList = async () => {
   const response = await axiosInstance.request<MessageBoardItem[]>({
     method: 'get',
     url: '/messages',
   });
-  console.log(response.data);
+  return response.data;
+};
+
+export const addNewMessage = async (data: Omit<MessageBoardItem, 'id'>) => {
+  const response = await axiosInstance.request<MessageBoardItem>({
+    method: 'post',
+    data,
+    url: '/messages',
+  });
+
   return response.data;
 };

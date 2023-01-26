@@ -9,3 +9,15 @@ export type AppThunk<ReturnType = void> = ThunkAction<
   unknown,
   Action<string>
 >;
+
+export interface RequestSliceStateProperty<T = unknown> {
+  data: T | null;
+  error: unknown | null;
+  isLoading: boolean;
+}
+
+export interface ErrorPayload {
+  isRequestError: boolean;
+  code: number;
+  responseBody: unknown;
+}
