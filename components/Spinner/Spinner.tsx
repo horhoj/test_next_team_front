@@ -5,13 +5,18 @@ import styles from './Spinner.module.scss';
 import { Portal } from '@/components/Portal';
 import { useAppSelector } from '@/store/hooks';
 import { messageBoardSlice } from '@/store/messageBoard';
+import { averageNumbersSlice } from '@/store/averageNumbers';
 
 export const Spinner: FC = () => {
   const messageBoardIsLoading = useAppSelector(
     messageBoardSlice.selectors.getIsLoading,
   );
 
-  const isLoading = messageBoardIsLoading;
+  const averageNumbersIsLoading = useAppSelector(
+    averageNumbersSlice.selectors.getIsLoading,
+  );
+
+  const isLoading = messageBoardIsLoading || averageNumbersIsLoading;
 
   const ref = useRef<HTMLDivElement>(null);
 

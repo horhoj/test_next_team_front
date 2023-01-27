@@ -13,7 +13,6 @@ export const ErrorView: FC<ErrorViewProps> = ({ error }) => {
     errorMsg = (error as ErrorPayload)?.responseBody;
   } else {
     errorMsg = (error as Error)?.message;
-    console.log(error);
   }
 
   return <div className={styles.wrap}>{JSON.stringify(errorMsg)}</div>;
