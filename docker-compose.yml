@@ -1,17 +1,14 @@
 version: "3"
 
 services:
-  node:
+  server:
     build:
-      context: docker/nodejs
+      context: ./
     user: "node"
-    working_dir: /home/node/app
+    working_dir: /application
     environment:
       - NODE_ENV=development
       #- NODE_ENV=production
-    volumes:
-      - ./:/home/node/app
     ports:
-      - "3000:3000"
-      - "3004:3004"
+      - "3009:3009"
     tty: true
