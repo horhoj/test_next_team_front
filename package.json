@@ -3,11 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev -p 3009",
+    "dev": "next dev -p 3000",
     "build": "next build",
-    "start": "next start -p 3009",
-    "lint": "next lint --fix",
-    "ddev": "concurrently 'yarn server-docker' 'yarn dev'"
+    "start": "next start -p 3000",
+    "lint": "next lint --fix"
   },
   "dependencies": {
     "@next/font": "13.1.1",
