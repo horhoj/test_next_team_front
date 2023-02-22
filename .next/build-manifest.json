@@ -1,0 +1,43 @@
+{
+  "polyfillFiles": [
+    "static/chunks/polyfills-c67a75d1b6f99dc8.js"
+  ],
+  "devFiles": [],
+  "ampDevFiles": [],
+  "lowPriorityFiles": [
+    "static/bHk-LqXc59ZxZvmfUPudK/_buildManifest.js",
+    "static/bHk-LqXc59ZxZvmfUPudK/_ssgManifest.js"
+  ],
+  "rootMainFiles": [],
+  "pages": {
+    "/": [
+      "static/chunks/webpack-266da34e2468c883.js",
+      "static/chunks/framework-114634acb84f8baa.js",
+      "static/chunks/main-ee0cf4b7f81d7c24.js",
+      "static/chunks/100-999301100d9afda4.js",
+      "static/css/558b3f4bd7f15c98.css",
+      "static/chunks/pages/index-d68e1f4339df502b.js"
+    ],
+    "/_app": [
+      "static/chunks/webpack-266da34e2468c883.js",
+      "static/chunks/framework-114634acb84f8baa.js",
+      "static/chunks/main-ee0cf4b7f81d7c24.js",
+      "static/css/78463814e0def0fc.css",
+      "static/chunks/pages/_app-a5ab159ef0856a7f.js"
+    ],
+    "/_error": [
+      "static/chunks/webpack-266da34e2468c883.js",
+      "static/chunks/framework-114634acb84f8baa.js",
+      "static/chunks/main-ee0cf4b7f81d7c24.js",
+      "static/chunks/pages/_error-8353112a01355ec2.js"
+    ],
+    "/average-numbers": [
+      "static/chunks/webpack-266da34e2468c883.js",
+      "static/chunks/framework-114634acb84f8baa.js",
+      "static/chunks/main-ee0cf4b7f81d7c24.js",
+      "static/css/8171bde71494da59.css",
+      "static/chunks/pages/average-numbers-d22c5d78dfb74161.js"
+    ]
+  },
+  "ampFirstPages": []
+}

@@ -1,0 +1,1 @@
+self.__FONT_LOADER_MANIFEST={pages:{"/_app":["static/media/1c57ca6f5208a29b.p.woff2","static/media/0e4fe491bf84089c.p.woff2"],"/average-numbers":["static/media/42d52f46a26971a3.p.woff2"],"/":["static/media/42d52f46a26971a3.p.woff2"]},app:{}};
